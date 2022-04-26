@@ -260,4 +260,4 @@ gg_animacion
 
 gg_interactivo <- ggplotly(gg_animacion, tooltip = c("titulo","Recaudación")) 
 
-saveWidget(gg_interactivo, "index.html", selfcontained = F, libdir = "lib")
+saveWidget(gg_interactivo, "docs/index.html", selfcontained = F, libdir = "lib")
