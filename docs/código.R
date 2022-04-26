@@ -256,8 +256,8 @@ Fuente: Datos obtenidos de https://www.imdb.com.") +
 
 gg_animacion
 
-ggsave("output/day26_interactivo.png", gg_animacion, device = "png", width = 6, height = 6)
+#ggsave("image.png", gg_animacion, device = "png", width = 6, height = 6)
 
 gg_interactivo <- ggplotly(gg_animacion, tooltip = c("titulo","Recaudación")) 
 
-saveWidget(gg_interactivo, "output/day26_interactivo.html", selfcontained = F, libdir = "lib")
+saveWidget(gg_interactivo, "index.html", selfcontained = F, libdir = "lib")
