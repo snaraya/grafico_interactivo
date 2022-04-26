@@ -258,6 +258,16 @@ gg_animacion
 
 #ggsave("image.png", gg_animacion, device = "png", width = 6, height = 6)
 
-gg_interactivo <- ggplotly(gg_animacion, tooltip = c("titulo","Recaudación")) 
+
+m <- list(
+  l = 50,
+  r = 50,
+  b = 100,
+  t = 100,
+  pad = 4
+)
+
+gg_interactivo <- ggplotly(gg_animacion, tooltip = c("titulo","Recaudación"),
+                           autosize = F, width = 600, height = 500, margin = m) 
 
 saveWidget(gg_interactivo, "docs/index.html", selfcontained = F, libdir = "lib")
